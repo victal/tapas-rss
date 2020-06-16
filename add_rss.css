@@ -1,0 +1,8 @@
+.series-root .section__top .info__right .button-wrapper .button {
+	min-width: 133px;
+}
+
+.vw-root .side-section--series .series-info .info-body__bottom .subscribe-btn {
+	display: inline-block;
+	width: 49%;
+}
