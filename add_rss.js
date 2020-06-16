@@ -44,6 +44,12 @@ const addSideRSSButtons = link => {
   }
 }
 
-// Adds button on main /info page
-addRSSButtons(getRSSUrl())
-addSideRSSButtons(getRSSUrl())
+const hasModule = typeof exports !== 'undefined'
+
+if (hasModule) {
+  module.exports = {
+    addRSSButtons,
+    addSideRSSButtons,
+    getRSSUrl
+  }
+}

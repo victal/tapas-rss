@@ -13,7 +13,7 @@
   },
   "content_scripts": [{
     "matches": ["*://tapas.io/series/*", "*://tapas.io/episode/*"],
-    "js": ["add_rss.js", "mutation.js"],
+    "js": ["mutation.js", "add_rss.js", "main.js"],
     "css": ["add_rss.css"]
   }],
   "permissions": []
