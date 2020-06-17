@@ -13,8 +13,8 @@ const hasRSSButton = element => {
   return false
 }
 
-const addRSSButtons = link => {
-  const subscribeButtons = document.querySelectorAll('.button--subscribe')
+const addRSSButtons = getSiblings => link => {
+  const subscribeButtons = getSiblings()
   for (const button of subscribeButtons) {
     const parent = button.parentElement
     if (!hasRSSButton(parent)) {
@@ -23,33 +23,19 @@ const addRSSButtons = link => {
       rssButton.classList.add('button-rss')
       rssButton.textContent = 'RSS'
       rssButton.setAttribute('href', link)
-      rssButton.setAttribute('style', 'margin-left: 6px;')
       parent.appendChild(rssButton)
     }
   }
 }
 
-const addSideRSSButtons = link => {
-  const subscribeButtons = document.querySelectorAll('.subscribe-btn')
-  for (const button of subscribeButtons) {
-    const parent = button.parentElement
-    if (!hasRSSButton(parent)) {
-      const rssButton = document.createElement('a')
-      rssButton.classList = button.classList
-      rssButton.classList.add('button-rss')
-      rssButton.textContent = 'RSS'
-      rssButton.setAttribute('href', link)
-      parent.appendChild(rssButton)
-    }
-  }
-}
+const getSubscribeButtons = () => document.querySelectorAll('.button--subscribe, .subscribe-btn')
 
 const hasModule = typeof exports !== 'undefined'
 
 if (hasModule) {
   module.exports = {
     addRSSButtons,
-    addSideRSSButtons,
+    getSubscribeButtons,
     getRSSUrl
   }
 }
