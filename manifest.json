@@ -18,7 +18,8 @@
       "src/add_rss.js", 
       "src/index.js"
     ],
-    "css": ["css/add_rss.css"]
+    "css": ["css/add_rss.css"],
+    "all_frames": true
   }],
   "permissions": []
 }
