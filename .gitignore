@@ -29,3 +29,7 @@ node_modules/
 # dotenv environment variables file
 .env
 .env.test
+
+# Cypress result file directories
+cypress/screenshots
+cypress/videos
