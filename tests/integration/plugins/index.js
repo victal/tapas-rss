@@ -17,7 +17,7 @@
  */
 module.exports = (on, config) => {
   on('before:browser:launch', (browser, launchOptions) => {
-    launchOptions.extensions.push(`${__dirname}/../..`)
+    launchOptions.extensions.push(`${__dirname}/../../..`)
     return launchOptions
   })
 }

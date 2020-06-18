@@ -33,3 +33,5 @@ node_modules/
 # Cypress result file directories
 cypress/screenshots
 cypress/videos
+tests/integration/screenshots
+tests/integration/videos
