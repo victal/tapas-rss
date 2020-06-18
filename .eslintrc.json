@@ -8,7 +8,18 @@
     ],
     "globals": {
         "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
+        "SharedArrayBuffer": "readonly",
+        "it": true,
+        "describe": true,
+        "expect": true,
+        "sinon": true,
+        "before": true,
+        "beforeEach": true,
+        "after": true,
+        "afterEach": true,
+        "context": true,
+        "cy": true,
+        "Cypress": true
     },
     "parserOptions": {
         "ecmaVersion": 2018,
