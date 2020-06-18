@@ -40,7 +40,7 @@ describe('Cypress initial tests', () => {
     cy.location().should(loc => {
       expect(loc.pathname).to.be.equal(`/series/${testInfo.name}/info`)
     })
-    const subscribeButtons = cy.get('.modal-backdrop').get('button--subscribe')
+    const subscribeButtons = cy.get('.modal-backdrop').get('.button--subscribe')
     const rssButtons = subscribeButtons.parent().children('.button-rss')
     rssButtons.should('contain', 'RSS')
     rssButtons.should('have.attr', 'href', `https://tapas.io/rss/series/${testInfo.id}`)
