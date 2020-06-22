@@ -26,5 +26,11 @@
         "sourceType": "module"
     },
     "rules": {
-    }
+    },
+    "overrides": [{
+        "files": ["**/*.spec.js"],
+        "rules": {
+            "no-unused-expressions": "off"
+        }
+    }]
 }
