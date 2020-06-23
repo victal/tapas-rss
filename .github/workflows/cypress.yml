@@ -3,8 +3,11 @@ on:
   - push
 jobs:
   cypress-run:
-    name: Cypress run
     runs-on: ubuntu-16.04
+    strategy: 
+      matrix: 
+        browser: ['chrome', 'firefox']
+    name: Run Cypress tests on ${{ matrix.browser }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -12,3 +15,5 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           config-file: cypress.json
+          browser: ${{ matrix.browser }}
+          record: false
