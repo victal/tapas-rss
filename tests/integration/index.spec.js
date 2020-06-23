@@ -1,18 +1,6 @@
+const { testPages } = require('../utils/series')
 
-// Map of known Tapas series pages along with their ids
-const testPages = [
-  {
-    name: 'Anna-Saito',
-    id: '85441',
-    episode: '1051129'
-  }, {
-    name: 'BEAR',
-    id: '3601',
-    episode: '901795'
-  }
-]
-
-describe('Cypress initial tests', () => {
+describe('Cypress tests for extension UI changes', () => {
   for (const info of testPages) {
     it(`Should find an RSS button accessing the info page directly for ${info.name}`, () => {
       cy.visit(`https://tapas.io/series/${info.name}/info`)
@@ -22,12 +10,14 @@ describe('Cypress initial tests', () => {
       const rssButtons = cy.get('.button-rss')
       rssButtons.should('contain', 'RSS')
       rssButtons.should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}`)
+    })
 
-      // TODO: Actually validate rss content
-      cy.request(`https://tapas.io/rss/series/${info.id}`).should(response => {
-        expect(response.status).to.be.equal(200)
-        expect(response.body).to.not.be.undefined
-      })
+    it(`Should find an RSS button on the last episode page for ${info.name}'s sidebar`, () => {
+      cy.visit(`https://tapas.io/series/${info.name}`)
+      const subscribeButtons = cy.get('.side-section').get('.subscribe-btn')
+      const rssButtons = subscribeButtons.parent().children('.button-rss')
+      rssButtons.should('contain', 'RSS')
+      rssButtons.should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}`)
     })
 
     it(`Should find an RSS button on a ${info.name} episode page sidebar`, () => {

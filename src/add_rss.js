@@ -1,6 +1,7 @@
+const getIdFromPage = () => document.querySelectorAll('meta[content*="tapastic://series"]')[0].getAttribute('content').split('/')[3]
 
-const getRSSUrl = () => {
-  const seriesId = document.querySelectorAll('meta[content*="tapastic://series"]')[0].getAttribute('content').split('/')[3]
+const getRSSUrl = id => {
+  const seriesId = id || getIdFromPage()
   return `https://tapas.io/rss/series/${seriesId}`
 }
 
