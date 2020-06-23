@@ -7,7 +7,8 @@
     "dev": "web-ext run -f ${FIREFOX:-firefox}",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "npm run test:cypress",
+    "test": "npm run test:unit && npm run test:cypress",
+    "test:unit": "mocha tests/unit/**/*.spec.js",
     "test:cypress": "cypress run -b ${BROWSER:-firefox}"
   },
   "repository": {
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/victal/tapas-rss#readme",
   "devDependencies": {
+    "chai": "^4.2.0",
     "cypress": "^4.8.0",
     "eslint": "^7.2.0",
     "eslint-config-standard": "^14.1.1",
@@ -29,6 +31,16 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-watch": "^6.0.1",
-    "web-ext": "^4.2.0"
+    "got": "^11.3.0",
+    "husky": "^4.2.5",
+    "mocha": "^8.0.1",
+    "rss-parser": "^3.8.0",
+    "web-ext": "^4.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test:unit"
+    }
   }
 }
