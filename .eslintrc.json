@@ -26,8 +26,9 @@
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": ["cypress"],
+    "plugins": ["cypress", "mocha"],
     "rules": {
+        "mocha/no-exclusive-tests": "error"
     },
     "overrides": [{
         "files": ["**/*.spec.js"],
