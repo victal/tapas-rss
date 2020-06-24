@@ -4,6 +4,7 @@
   "description": "A webextension to add an rss button to tapas.io webcomics pages",
   "main": "",
   "scripts": {
+    "build": "web-ext build -o -i tests/ cypress/ images/ node_modules/ package.json README.md package-lock.json cypress.json",
     "dev": "web-ext run -f ${FIREFOX:-firefox}",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
