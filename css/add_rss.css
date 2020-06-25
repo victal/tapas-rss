@@ -1,12 +1,13 @@
+/* !important is needed because of the order extension css is loaded in chrome */ 
 .series-root .section__top .info__right .button-wrapper .button {
-	min-width: 133px;
+	min-width: 133px !important;
 }
 
 .series-root .section__top .info__right .button-wrapper .button.button-rss {
-	margin-left: 6px;
+	margin-left: 6px !important;
 }
 
 .vw-root .side-section--series .series-info .info-body__bottom .subscribe-btn {
-	display: inline-block;
-	width: 49%;
+	display: inline-block !important;
+	width: 49% !important;
 }
