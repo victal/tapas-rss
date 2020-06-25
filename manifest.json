@@ -1,15 +1,11 @@
 {
   "manifest_version": 2,
   "name": "Tapas RSS Button",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A webextension that adds an RSS feed button on tapas.io webcomic pages",
   "icons": {
-  },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "{e6ad355f-be44-4c03-9d49-a39f84ac702a}",
-      "strict_min_version": "60.0"
-    }
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
   },
   "content_scripts": [{
     "matches": ["*://tapas.io/series/*", "*://tapas.io/episode/*"],

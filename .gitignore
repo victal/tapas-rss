@@ -35,3 +35,6 @@ cypress/screenshots
 cypress/videos
 tests/integration/screenshots
 tests/integration/videos
+
+# Webextension build files
+web-ext-artifacts/
