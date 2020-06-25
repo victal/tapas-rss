@@ -10,7 +10,9 @@ Do you enjoy reading webcomics? Do you like using RSS instead of each different 
 
 ## Installation
 
-- TODO
+The Firefox Webextension can be installed directly from https://addons.mozilla.org - just click the button below to get to the installation page
+
+[![Click here!](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png)](https://addons.mozilla.org/en-US/firefox/addon/tapas-rss-button/)
 
 ## tapas-rss in action 
 
@@ -27,11 +29,10 @@ Tapas-rss adds RSS buttons on:
 
 ## Permissions
 
-No special permissions are needed.
+The only permission requested by the extension is access to data on tapas.io pages, as it is needed to inject the JS that creates the rss button and retrieves the series RSS feed.
 
 ## TODO: 
 
-- [ ] Add github actions to test pushes to master
-- [ ] Add extension to AMO
 - [ ] Fix extension on chrome
 - [ ] Add extension to chrome web store
+- [ ] Add bookmarklet/userscript option
