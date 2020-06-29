@@ -8,7 +8,7 @@
     "96": "icons/icon.svg"
   },
   "content_scripts": [{
-    "matches": ["*://tapas.io/series/*", "*://tapas.io/episode/*"],
+    "matches": ["*://tapas.io/series/*", "*://tapas.io/episode/*", "*://m.tapas.io/series/*", "*://m.tapas.io/episode/*"],
     "js": [
       "src/mutation.js", 
       "src/add_rss.js", 

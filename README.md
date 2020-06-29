@@ -19,13 +19,13 @@ The Firefox Webextension can be installed directly from https://addons.mozilla.o
 Tapas-rss adds RSS buttons on:
 
  - A series' /info page
- ![Info page with rss button](images/infopage.png "Info page with rss button")
+ ![Info page with rss button](images/infopage_arrow.png "Info page with rss button")
 
  - The sidebar in an episode page
- ![Sidebar with rss button](images/sidebar.png "Sidebar with rss button")
+ ![Sidebar with rss button](images/sidebar_arrow.png "Sidebar with rss button")
 
  - The info modal in an episode page
- ![Info modal with an rss button](images/modal.png "Info modal with an rss button")
+ ![Info modal with an rss button](images/modal_arrow.png "Info modal with an rss button")
 
 ## Permissions
 
@@ -33,6 +33,5 @@ The only permission requested by the extension is access to data on tapas.io pag
 
 ## TODO: 
 
-- [ ] Fix extension on chrome
-- [ ] Add extension to chrome web store
+- [?] Add extension to chrome web store
 - [ ] Add bookmarklet/userscript option
