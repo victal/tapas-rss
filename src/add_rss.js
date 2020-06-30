@@ -20,6 +20,7 @@ const addRSSButtons = getSiblings => link => {
     const parent = button.parentElement
     if (!hasRSSButton(parent)) {
       const rssButton = document.createElement('a')
+      rssButton.setAttribute('target', '_blank')
       rssButton.classList = button.classList
       rssButton.classList.add('button-rss')
       rssButton.textContent = 'RSS'

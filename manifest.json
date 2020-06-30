@@ -4,8 +4,10 @@
   "version": "1.0.0",
   "description": "A webextension that adds an RSS feed button on tapas.io webcomic pages",
   "icons": {
-    "48": "icons/icon.svg",
-    "96": "icons/icon.svg"
+    "32": "icons/icon-128.png",
+    "48": "icons/icon-128.png",
+    "96": "icons/icon-128.png",
+    "128": "icons/icon-128.png"
   },
   "content_scripts": [{
     "matches": ["*://tapas.io/series/*", "*://tapas.io/episode/*", "*://m.tapas.io/series/*", "*://m.tapas.io/episode/*"],
