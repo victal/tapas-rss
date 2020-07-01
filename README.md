@@ -31,9 +31,8 @@ Tapas-rss adds RSS buttons on:
 
 ## Permissions
 
-The only permission requested by the extension is access to data on tapas.io pages, as it is needed to inject the JS that creates the rss button and retrieves the series RSS feed.
+The only permission requested by the extension is access to data on tapas.io and m.tapas.io pages, as it is needed to inject the JS that creates the rss button and retrieves the series RSS feed.
 
 ## TODO: 
 
-- [?] Add extension to chrome web store
 - [ ] Add bookmarklet/userscript option
