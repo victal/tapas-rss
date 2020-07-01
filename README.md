@@ -1,6 +1,7 @@
-# tapas-rss
+# tapas-rss 
+![](https://github.com/victal/tapas-rss/workflows/Node%20CI/badge.svg) ![](https://github.com/victal/tapas-rss/workflows/Cypress%20tests/badge.svg)
 
-A Webextension (currently working on Firefox) that adds RSS buttons on [tapas.io](https://tapas.io) series pages.
+A Webextension that adds RSS buttons on [tapas.io](https://tapas.io) series pages.
 
 Tapas is a platform for publishing and reading webcomics and webnovels and, while it still provides RSS feeds for the series it hosts, there is no ui component to access these feeds. This webextension restores such functionality.
 
@@ -14,6 +15,7 @@ The Firefox Webextension can be installed directly from https://addons.mozilla.o
 
 [![Click here!](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png)](https://addons.mozilla.org/en-US/firefox/addon/tapas-rss-button/)
 
+The Chrome webextension can be installed from the [Chrome Web Store](https://chrome.google.com/webstore/detail/tapas-rss-button/oaodnnbbhbpcaoliplcpdhipcmgmpnnh)
 ## tapas-rss in action 
 
 Tapas-rss adds RSS buttons on:
