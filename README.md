@@ -33,6 +33,6 @@ Tapas-rss adds RSS buttons on:
 
 The only permission requested by the extension is access to data on tapas.io and m.tapas.io pages, as it is needed to inject the JS that creates the rss button and retrieves the series RSS feed.
 
-## TODO: 
+## Similar projects: 
 
-- [ ] Add bookmarklet/userscript option
+- A [userscript](https://greasyfork.org/en/scripts/405379-tapas-io-rss-button/code) was created by another tapas.io user which does the same as this extension. More information can be found in [this thread](https://forums.tapas.io/t/rss-feeds-gone/41724/5) at tapas.io forums.
