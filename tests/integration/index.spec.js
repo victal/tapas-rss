@@ -9,7 +9,7 @@ describe('Cypress tests for extension UI changes', () => {
       // Or add visual validation
       cy.get('.button-rss')
         .should('contain', 'RSS')
-        .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}`)
+        .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`)
     })
 
     it(`Should find an RSS button on the last episode page for ${info.name}'s sidebar`, () => {
@@ -18,7 +18,7 @@ describe('Cypress tests for extension UI changes', () => {
         .get('.subscribe-btn').parent()
         .children('.button-rss')
         .should('contain', 'RSS')
-        .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}`)
+        .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`)
     })
 
     it(`Should find an RSS button on a ${info.name} episode page sidebar`, () => {
@@ -27,7 +27,7 @@ describe('Cypress tests for extension UI changes', () => {
         .get('.subscribe-btn').parent()
         .children('.button-rss')
         .should('contain', 'RSS')
-        .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}`)
+        .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`)
     })
 
     it(`Should find an RSS button in the /info popup from the ${info.name} episode page`, () => {
@@ -40,7 +40,7 @@ describe('Cypress tests for extension UI changes', () => {
         .get('.button--subscribe').parent()
         .children('.button-rss')
         .should('contain', 'RSS')
-        .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}`)
+        .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`)
     })
   }
 })

@@ -2,7 +2,7 @@ const getIdFromPage = () => document.querySelectorAll('meta[content*="tapastic:/
 
 const getRSSUrl = id => {
   const seriesId = id || getIdFromPage()
-  return `https://tapas.io/rss/series/${seriesId}`
+  return `https://tapas.io/rss/series/${seriesId}/`
 }
 
 const hasRSSButton = element => {
