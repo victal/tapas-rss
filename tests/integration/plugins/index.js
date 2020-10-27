@@ -1,3 +1,4 @@
+const path = require('path')
 /// <reference types="cypress" />
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
@@ -17,7 +18,7 @@
  */
 module.exports = (on, config) => {
   on('before:browser:launch', (browser, launchOptions) => {
-    launchOptions.extensions.push(`${__dirname}/../../..`)
+    launchOptions.extensions.push(path.join(__dirname, '..', '..', '..'))
     return launchOptions
   })
 }
