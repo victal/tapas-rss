@@ -35,7 +35,7 @@
     "eslint-plugin-standard": "^5.0.0",
     "eslint-watch": "^7.0.0",
     "got": "^11.8.0",
-    "husky": "^4.3.0",
+    "husky": "^4.3.5",
     "mocha": "^8.2.1",
     "rss-parser": "^3.9.0",
     "web-ext": "^5.4.0"
