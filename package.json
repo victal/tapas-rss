@@ -38,7 +38,7 @@
     "husky": "^4.3.7",
     "mocha": "^8.2.1",
     "rss-parser": "^3.10.0",
-    "web-ext": "^5.4.1"
+    "web-ext": "^5.5.0"
   },
   "husky": {
     "hooks": {
