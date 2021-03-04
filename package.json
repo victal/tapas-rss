@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/victal/tapas-rss#readme",
   "devDependencies": {
-    "chai": "^4.2.0",
+    "chai": "^4.3.3",
     "cypress": "^6.2.1",
     "eslint": "^7.17.0",
     "eslint-config-standard": "^16.0.2",
