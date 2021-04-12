@@ -10,7 +10,8 @@
     "lint:fix": "eslint . --fix",
     "test": "npm run test:unit && npm run test:cypress",
     "test:unit": "mocha tests/unit/**/*.spec.js",
-    "test:cypress": "cypress run -b ${BROWSER:-firefox}"
+    "test:cypress": "cypress run -b ${BROWSER:-firefox}",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -39,12 +40,6 @@
     "mocha": "^8.3.2",
     "rss-parser": "^3.12.0",
     "web-ext": "^5.5.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm run test:unit"
-    }
   },
   "dependencies": {}
 }
