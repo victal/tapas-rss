@@ -26,7 +26,7 @@
   "devDependencies": {
     "chai": "^4.3.4",
     "cypress": "^7.4.0",
-    "eslint": "^7.27.0",
+    "eslint": "^7.28.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-import": "^2.23.4",
