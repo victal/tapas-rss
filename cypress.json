@@ -5,6 +5,7 @@
   "supportFile": false,
   "testFiles": "**/*.spec.js",
   "video": false,
+  "defaultCommandTimeout": 7000,
   "firefoxGcInterval": {
     "runMode": null,
     "openMode": null
