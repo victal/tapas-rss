@@ -6,10 +6,6 @@
   "testFiles": "**/*.spec.js",
   "video": false,
   "defaultCommandTimeout": 7000,
-  "firefoxGcInterval": {
-    "runMode": null,
-    "openMode": null
-  },
   "viewportHeight": 1080,
   "viewportWidth": 1920
 }
