@@ -5,10 +5,6 @@
   "supportFile": false,
   "testFiles": "**/*.spec.js",
   "video": false,
-  "firefoxGcInterval": {
-    "runMode": null,
-    "openMode": null
-  },
   "viewportHeight": 1080,
   "viewportWidth": 1920
 }

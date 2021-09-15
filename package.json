@@ -11,6 +11,7 @@
     "test": "npm run test:unit && npm run test:cypress",
     "test:unit": "mocha tests/unit/**/*.spec.js",
     "test:cypress": "cypress run -b ${BROWSER:-firefox}",
+    "cypress:open": "cypress open",
     "prepare": "husky install"
   },
   "repository": {
