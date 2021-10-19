@@ -7,10 +7,10 @@ const testPages = [
     id: '85441',
     episode: '1051129'
   }, {
-    name: 'BEAR',
-    title: 'BEAR',
-    id: '3601',
-    episode: '901795'
+    name: 'Dying-Light1',
+    title: 'Dying Light',
+    id: '199357',
+    episode: '2266438'
   }, {
     // series with rss only acessible via slash-terminated url
     // see https://forums.tapas.io/t/rss-feeds-gone/41724/5 for details
