@@ -21,5 +21,6 @@ jobs:
         with:
           config-file: cypress.json
           browser: ${{ matrix.browser }}
+          env: BROWSER=${{ matrix.browser }}
           record: false
-          command: BROWSER=${{ matrix.browser }} npm run test:cypress -- --headed
+          command: npm run test:cypress -- --headed
