@@ -6,6 +6,12 @@
   "testFiles": "**/*.spec.js",
   "video": false,
   "defaultCommandTimeout": 7000,
+  "responseTimeout": 30000,
+  "pageLoadTimeout": 60000,
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
+  },
   "viewportHeight": 1080,
   "viewportWidth": 1920
 }

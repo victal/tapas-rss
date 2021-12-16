@@ -21,4 +21,5 @@ jobs:
         with:
           config-file: cypress.json
           browser: ${{ matrix.browser }}
+          headless: false
           record: false
