@@ -1,5 +1,5 @@
 const expect = require('chai').expect
-const got = require('got')
+const axios = require('axios')
 const Parser = require('rss-parser')
 const parser = new Parser()
 
@@ -11,8 +11,8 @@ describe('RSS link tests', () => {
     for (const page of testPages) {
       it(`For page ${page.name}`, async () => {
         const url = getRSSUrl(page.id)
-        const response = await got(url)
-        const body = response.body
+        const response = await axios.get(url)
+        const body = response.data
         const result = await parser.parseString(body)
         expect(result).to.deep.include({
           title: page.title,
