@@ -17,10 +17,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.0.2
       - name: Cypress run
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
         with:
-          config-file: cypress.json
+          headed: true
           browser: ${{ matrix.browser }}
           env: BROWSER=${{ matrix.browser }}
           record: false
-          command: npm run test:cypress -- --headed
+          command: npm run test:cypress
