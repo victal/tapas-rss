@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/victal/tapas-rss#readme",
   "devDependencies": {
-    "axios": "^1.0.0",
+    "axios": "^1.1.0",
     "chai": "^4.3.6",
     "cypress": "^10.9.0",
     "eslint": "^8.24.0",
