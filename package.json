@@ -27,7 +27,7 @@
   "devDependencies": {
     "axios": "^1.1.2",
     "chai": "^4.3.6",
-    "cypress": "^10.9.0",
+    "cypress": "^10.10.0",
     "eslint": "^8.25.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-cypress": "^2.12.1",
