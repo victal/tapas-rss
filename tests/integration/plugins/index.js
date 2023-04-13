@@ -19,6 +19,6 @@ const extensionLoader = require('@victal/cypress-extensions-plugin/loader')
 module.exports = (on, config) => {
   on('before:browser:launch', extensionLoader.load({
     source: path.join(__dirname, '..', '..', '..'),
-    validBrowsers: ['chrome', 'firefox'],
+    validBrowsers: ['chrome', 'firefox']
   }))
 }

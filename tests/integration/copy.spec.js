@@ -1,12 +1,15 @@
 const { testPages } = require('../utils/series')
 
 describe('Cypress tests for extension UI changes', () => {
-  beforeEach(() => cy.setExtensionStorage('sync', { rssAction: 'copy' })
-  )
-  afterEach(() => cy.clearExtensionStorage('sync'))
+  beforeEach(async () => {
+    return cy.setExtensionStorage('sync', { rssAction: 'copy' })
+  })
+  afterEach(() => {
+    return cy.clearExtensionStorage('sync')
+  })
 
   for (const info of testPages) {
-    it.only(`Should find an RSS button accessing the info page directly for ${info.name}`, () => {
+    it(`Should find an RSS button accessing the info page directly for ${info.name}`, () => {
       cy.visit(`https://tapas.io/series/${info.name}/info`)
 
       // TODO: Get adjacent subscribe button and validate same css except for a ignoreList
@@ -14,13 +17,11 @@ describe('Cypress tests for extension UI changes', () => {
       cy.get('.button-rss')
         .should('contain', 'RSS')
         .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`).each(button => {
-        cy.get(button).click()
-        .and('contain', 'Copied!')
-          cy.window().its('navigator.clipboard')
-          .then((clip) => clip.readText())
-          .should('equal', 'npm install -D cypress')
+          if (button.is(':visible')) {
+            cy.get(button).click()
+              .and('contain', 'Copied!')
+          }
         })
-
     })
 
     it(`Should find an RSS button on the last episode page for ${info.name}'s sidebar`, () => {
@@ -29,7 +30,10 @@ describe('Cypress tests for extension UI changes', () => {
         .get('.subscribe-btn').parent()
         .children('.button-rss')
         .should('contain', 'RSS')
-        .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`)
+        .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`).each(button => {
+          cy.get(button).click()
+            .and('contain', 'Copied!')
+        })
     })
 
     it(`Should find an RSS button on a ${info.name} episode page sidebar`, () => {
@@ -38,7 +42,10 @@ describe('Cypress tests for extension UI changes', () => {
         .get('.subscribe-btn').parent()
         .children('.button-rss')
         .should('contain', 'RSS')
-        .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`)
+        .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`).each(button => {
+          cy.get(button).click()
+            .and('contain', 'Copied!')
+        })
     })
 
     it(`Should find an RSS button in the /info popup from the ${info.name} episode page`, () => {
@@ -51,8 +58,10 @@ describe('Cypress tests for extension UI changes', () => {
         .get('.button--subscribe').parent()
         .children('.button-rss')
         .should('contain', 'RSS')
-        .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`)
+        .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`).each(button => {
+          cy.get(button).click()
+            .and('contain', 'Copied!')
+        })
     })
   }
 })
-

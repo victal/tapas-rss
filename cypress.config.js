@@ -19,6 +19,6 @@ module.exports = defineConfig({
       return require('./tests/integration/plugins/index.js')(on, config)
     },
     specPattern: 'tests/integration/**/*.spec.js',
-    supportFile: './tests/integration/support/index.js',
+    supportFile: './tests/integration/support/index.js'
   }
 })
