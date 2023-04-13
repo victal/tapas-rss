@@ -19,7 +19,7 @@ describe('Cypress tests for extension UI changes', () => {
         .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`).each(button => {
           if (button.is(':visible')) {
             cy.get(button).click()
-              .and('contain', 'Copied!')
+            cy.get(button).should('contain', 'Copied!')
           }
         })
     })
@@ -32,7 +32,7 @@ describe('Cypress tests for extension UI changes', () => {
         .should('contain', 'RSS')
         .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`).each(button => {
           cy.get(button).click()
-            .and('contain', 'Copied!')
+          cy.get(button).should('contain', 'Copied!')
         })
     })
 
@@ -44,7 +44,7 @@ describe('Cypress tests for extension UI changes', () => {
         .should('contain', 'RSS')
         .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`).each(button => {
           cy.get(button).click()
-            .and('contain', 'Copied!')
+          cy.get(button).should('contain', 'Copied!')
         })
     })
 
@@ -60,7 +60,7 @@ describe('Cypress tests for extension UI changes', () => {
         .should('contain', 'RSS')
         .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`).each(button => {
           cy.get(button).click()
-            .and('contain', 'Copied!')
+          cy.get(button).should('contain', 'Copied!')
         })
     })
   }
