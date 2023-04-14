@@ -7,7 +7,6 @@
   </head>
 
   <body>
-    <form id="form">
       <fieldset id="action">
         <legend>RSS Button action:</legend>
         <input type="radio" name="action" id="action-open" value="open" checked></input>
@@ -18,9 +17,9 @@
       </fieldset>
         <p><strong>Warning</strong>: Any open tapas.io tabs must be refreshed in order for changes to take effect in them.</p>
       <div id="submit" class="pull-right">
-        <input type="submit" name="save" id="save" value="Save" />
+        <button id="save">Save</button>
+        <span id="status"></span>
       </div>
-    </form>
     <script src="./options.js"></script>
   </body>
 </html>
