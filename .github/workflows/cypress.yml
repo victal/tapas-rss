@@ -15,7 +15,7 @@ jobs:
     name: Run Cypress tests on ${{ matrix.browser }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@v3.5.2
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
