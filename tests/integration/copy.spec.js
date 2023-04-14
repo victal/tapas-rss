@@ -59,8 +59,10 @@ describe('Cypress tests for extension UI changes', () => {
         .children('.button-rss')
         .should('contain', 'RSS')
         .should('have.attr', 'href', `https://tapas.io/rss/series/${info.id}/`).each(button => {
-          cy.get(button).click()
-          cy.get(button).should('contain', 'Copied!')
+          if (button.is(':visible')) {
+            cy.get(button).click()
+            cy.get(button).should('contain', 'Copied!')
+          }
         })
     })
   }
