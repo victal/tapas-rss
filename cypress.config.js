@@ -12,6 +12,12 @@ module.exports = defineConfig({
   },
   viewportHeight: 1080,
   viewportWidth: 1920,
+  blockHosts: [
+    '*.doubleclick.net',
+    '*.amazon-adsystem.com',
+    '*.adjust.com',
+    '*.amplitude.com'
+  ],
   e2e: {
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
