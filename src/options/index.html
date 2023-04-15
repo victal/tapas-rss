@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./options.css" type="text/css" media="all" />
+  </head>
+
+  <body>
+      <fieldset id="action">
+        <legend>RSS Button action:</legend>
+        <input type="radio" name="action" id="action-open" value="open" checked></input>
+        <label for="action-open">Open in a new tab (default)</label>
+        <br/>
+        <input type="radio" name="action" id="action-copy" value="copy" checked></input>
+        <label for="action-copy">Copy URL to clipboard</label>
+      </fieldset>
+        <p><strong>Warning</strong>: Any open tapas.io tabs must be refreshed in order for changes to take effect in them.</p>
+      <div id="submit" class="pull-right">
+        <button id="save">Save</button>
+        <span id="status"></span>
+      </div>
+    <script src="./options.js"></script>
+  </body>
+</html>
+

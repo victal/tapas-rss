@@ -12,13 +12,14 @@ const path = require('path')
 
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
-
+const extensionLoader = require('@victal/cypress-extensions-plugin/loader')
 /**
  * @type {Cypress.PluginConfig}
  */
 module.exports = (on, config) => {
-  on('before:browser:launch', (browser, launchOptions) => {
-    launchOptions.extensions.push(path.join(__dirname, '..', '..', '..'))
-    return launchOptions
-  })
+  on('before:browser:launch', extensionLoader.load({
+    source: path.join(__dirname, '..', '..', '..'),
+    watch: false,
+    validBrowsers: ['chrome', 'firefox']
+  }))
 }

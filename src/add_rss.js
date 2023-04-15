@@ -14,20 +14,42 @@ const hasRSSButton = element => {
   return false
 }
 
-const addRSSButtons = getSiblings => link => {
+let textChangeTimeout = null
+
+const addRSSButtons = getSiblings => async link => {
   const subscribeButtons = getSiblings()
-  for (const button of subscribeButtons) {
-    const parent = button.parentElement
-    if (!hasRSSButton(parent)) {
-      const rssButton = document.createElement('a')
-      rssButton.setAttribute('target', '_blank')
-      rssButton.classList = button.classList
-      rssButton.classList.add('button-rss')
-      rssButton.textContent = 'RSS'
-      rssButton.setAttribute('href', link)
-      parent.appendChild(rssButton)
+  chrome.storage.sync.get(['rssAction'], config => {
+    const action = config.rssAction || 'open'
+    for (const button of subscribeButtons) {
+      const parent = button.parentElement
+      if (!hasRSSButton(parent)) {
+        const rssButton = document.createElement('a')
+        rssButton.classList = button.classList
+        rssButton.classList.add('button-rss')
+        rssButton.textContent = 'RSS'
+        rssButton.setAttribute('href', link)
+        rssButton.setAttribute('target', '_blank')
+        if (action === 'copy') {
+          rssButton.addEventListener('click', async event => {
+            event.preventDefault()
+            rssButton.textContent = 'Copied!'
+            if (textChangeTimeout) {
+              clearTimeout(textChangeTimeout)
+            }
+            textChangeTimeout = setTimeout(() => {
+              rssButton.textContent = 'RSS'
+            }, 3000)
+            return navigator.clipboard.writeText(link)
+          })
+          rssButton.addEventListener('mouseout', () => {
+            rssButton.textContent = 'RSS'
+            textChangeTimeout && clearTimeout(textChangeTimeout)
+          })
+        }
+        parent.appendChild(rssButton)
+      }
     }
-  }
+  })
 }
 
 const getSubscribeButtons = () => document.querySelectorAll('.button--subscribe, .subscribe-btn')
