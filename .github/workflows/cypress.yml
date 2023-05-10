@@ -9,6 +9,7 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     strategy: 
       matrix: 
         browser: ['chrome', 'firefox']
