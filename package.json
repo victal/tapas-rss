@@ -28,7 +28,7 @@
     "@victal/cypress-extensions-plugin": "^0.1.6",
     "axios": "^1.4.0",
     "chai": "^4.3.7",
-    "cypress": "^12.15.0",
+    "cypress": "^12.16.0",
     "eslint": "^8.43.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-cypress": "^2.13.3",
