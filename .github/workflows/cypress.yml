@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.3
       - name: Cypress run
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v6
         with:
           headed: true
           browser: ${{ matrix.browser }}
