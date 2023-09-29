@@ -27,7 +27,7 @@
   "devDependencies": {
     "@victal/cypress-extensions-plugin": "^0.1.6",
     "axios": "^1.5.1",
-    "chai": "^4.3.9",
+    "chai": "^4.3.10",
     "cypress": "^13.3.0",
     "eslint": "^8.50.0",
     "eslint-config-standard": "^17.1.0",
