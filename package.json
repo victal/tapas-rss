@@ -26,7 +26,7 @@
   "homepage": "https://github.com/victal/tapas-rss#readme",
   "devDependencies": {
     "@victal/cypress-extensions-plugin": "^0.1.6",
-    "axios": "^1.6.0",
+    "axios": "^1.6.1",
     "chai": "^4.3.10",
     "cypress": "^13.4.0",
     "eslint": "^8.53.0",
