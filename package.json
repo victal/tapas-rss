@@ -41,7 +41,7 @@
     "husky": "^8.0.3",
     "mocha": "^10.2.0",
     "rss-parser": "^3.13.0",
-    "web-ext": "^7.8.0"
+    "web-ext": "^7.9.0"
   },
   "dependencies": {
     "browserify-versionify": "^1.0.6"
