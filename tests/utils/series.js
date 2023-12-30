@@ -21,10 +21,10 @@ const testPages = [
   },
   // Novels
   {
-    name: 'rtw',
-    title: 'Release That Witch',
-    id: '128811',
-    episode: '1313412'
+    name: 'What-if-xkcd',
+    title: 'What if?',
+    id: '254613',
+    episode: '2756941'
   }
 ]
 
