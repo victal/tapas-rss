@@ -34,14 +34,14 @@
     "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-mocha": "^10.2.0",
-    "eslint-plugin-n": "^16.6.1",
+    "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-watch": "^8.0.0",
     "husky": "^8.0.3",
     "mocha": "^10.2.0",
     "rss-parser": "^3.13.0",
-    "web-ext": "^7.9.0"
+    "web-ext": "^7.10.0"
   },
   "dependencies": {
     "browserify-versionify": "^1.0.6"
