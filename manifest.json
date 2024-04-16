@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Tapas RSS Button",
   "version": "1.1.0",
   "description": "A webextension that adds an RSS feed button on tapas.io webcomic pages",
@@ -9,16 +9,25 @@
     "96": "icons/icon-96.png",
     "128": "icons/icon-128.png"
   },
-  "content_scripts": [{
-    "matches": ["*://tapas.io/series/*", "*://tapas.io/episode/*", "*://m.tapas.io/series/*", "*://m.tapas.io/episode/*"],
-    "js": [
-      "src/mutation.js", 
-      "src/add_rss.js", 
-      "src/index.js"
-    ],
-    "css": ["css/add_rss.css"],
-    "all_frames": true
-  }],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://tapas.io/series/*",
+        "*://tapas.io/episode/*",
+        "*://m.tapas.io/series/*",
+        "*://m.tapas.io/episode/*"
+      ],
+      "js": [
+        "src/mutation.js",
+        "src/add_rss.js",
+        "src/index.js"
+      ],
+      "css": [
+        "css/add_rss.css"
+      ],
+      "all_frames": true
+    }
+  ],
   "permissions": [
     "storage"
   ],
@@ -29,5 +38,6 @@
     "gecko": {
       "id": "{395c081e-9f3b-4218-9587-bcbfa467c3b6}"
     }
-  }
+  },
+  "content_security_policy": {}
 }
