@@ -38,3 +38,5 @@ tests/integration/videos
 
 # Webextension build files
 web-ext-artifacts/
+manifest.json
+manifest-*

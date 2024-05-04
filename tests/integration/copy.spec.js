@@ -1,11 +1,12 @@
 const { testPages } = require('../utils/series')
 
 describe('Cypress tests for extension UI changes', () => {
+  const extensionAlias = `tapas-rss-${Cypress.browser.name}`
   beforeEach(async () => {
-    return cy.setExtensionStorage('sync', { rssAction: 'copy' })
+    return cy.setExtensionStorage('sync', { rssAction: 'copy' }, { alias: extensionAlias })
   })
   afterEach(() => {
-    return cy.clearExtensionStorage('sync')
+    return cy.clearExtensionStorage('sync', { alias: extensionAlias })
   })
 
   for (const info of testPages) {
