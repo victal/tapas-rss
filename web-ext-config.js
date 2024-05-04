@@ -1,8 +1,10 @@
 module.exports = {
   ignoreFiles: [
     'web-ext-config.js',
+    'web-ext-artifacts',
     'tests/',
     'cypress/',
+    'cypress.config.js',
     'images/',
     'node_modules/',
     'package.json',
