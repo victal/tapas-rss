@@ -11,8 +11,7 @@
     "test": "npm run test:unit && npm run test:cypress",
     "test:unit": "mocha tests/unit/**/*.spec.js",
     "test:cypress": "cypress run -b ${BROWSER:-firefox}",
-    "cypress:open": "cypress open",
-    "prepare": "husky install"
+    "cypress:open": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -25,7 +24,7 @@
   },
   "homepage": "https://github.com/victal/tapas-rss#readme",
   "devDependencies": {
-    "@victal/cypress-extensions-plugin": "^0.1.6",
+    "@victal/cypress-extensions-plugin": "^0.1.7",
     "axios": "^1.6.8",
     "chai": "^4.4.1",
     "cypress": "^13.7.2",
