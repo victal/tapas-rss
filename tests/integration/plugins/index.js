@@ -19,7 +19,15 @@ const extensionLoader = require('@victal/cypress-extensions-plugin/loader')
 module.exports = (on, config) => {
   on('before:browser:launch', extensionLoader.load({
     source: path.join(__dirname, '..', '..', '..'),
+    alias: 'tapas-rss-firefox',
+    manifest: 'manifest-firefox.json',
     watch: false,
-    validBrowsers: ['chrome', 'firefox']
+    validBrowsers: ['firefox']
+  }, {
+    source: path.join(__dirname, '..', '..', '..'),
+    alias: 'tapas-rss-chrome',
+    manifest: 'manifest-chrome.json',
+    watch: false,
+    validBrowsers: ['chrome']
   }))
 }

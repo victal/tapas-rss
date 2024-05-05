@@ -1,0 +1,8 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{395c081e-9f3b-4218-9587-bcbfa467c3b6}"
+    }
+  }
+}
