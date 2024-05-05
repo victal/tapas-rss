@@ -12,6 +12,8 @@ updates:
     ignore:
       - dependency-name: "chai"
         update-types: ["version-update:semver-major"]
+      - dependency-name: "eslint" # Due to dependency from addons-linter
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
