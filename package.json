@@ -1,6 +1,6 @@
 {
   "name": "tapas-rss",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A webextension to add an rss button to tapas.io webcomics pages",
   "main": "",
   "scripts": {
