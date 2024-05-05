@@ -10,12 +10,13 @@
     "dev": "npm run manifest:firefox && web-ext run -f ${FIREFOX:-firefox}",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "manifest": "npm run manifest:firefox && npm run manifest:chrome",
     "manifest:firefox": "node scripts/merge_manifests.js manifests/common.json manifests/firefox.json && cp manifest.json manifest-firefox.json",
     "manifest:chrome": "node scripts/merge_manifests.js manifests/common.json manifests/chrome.json && cp manifest.json manifest-chrome.json",
     "test": "npm run test:unit && npm run test:cypress",
     "test:unit": "mocha tests/unit/**/*.spec.js",
     "test:cypress": "npm run manifest:firefox && cypress run -b ${BROWSER:-firefox}",
-    "cypress:open": "npm run manifest:firefox && npm run manifest:chrome && cypress open"
+    "cypress:open": "npm run manifest && cypress open"
   },
   "repository": {
     "type": "git",
