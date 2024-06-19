@@ -30,22 +30,22 @@
   "homepage": "https://github.com/victal/tapas-rss#readme",
   "devDependencies": {
     "@victal/cypress-extensions-plugin": "^0.1.7",
-    "axios": "^1.7.0",
+    "axios": "^1.7.2",
     "chai": "^4.4.1",
-    "cypress": "^13.9.0",
+    "cypress": "^13.12.0",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-cypress": "^3.2.0",
+    "eslint-plugin-cypress": "^3.3.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-mocha": "^10.4.3",
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-promise": "^6.2.0",
     "eslint-watch": "^8.0.0",
     "husky": "^9.0.11",
     "mocha": "^10.4.0",
     "rss-parser": "^3.13.0",
-    "web-ext": "^7.11.0"
+    "web-ext": "^8.1.0"
   },
   "dependencies": {
     "browserify-versionify": "^1.0.6"
